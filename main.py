@@ -18,7 +18,7 @@ readline.set_history_length(1000)
 readline.parse_and_bind("tab: complete")
 
 # Define shell commands to support
-SUPPORTED_COMMANDS = ["cd", "ls", "pwd", "git", "ifconfig", "clear"]
+SUPPORTED_COMMANDS = ["cd", "ls", "pwd", "git", "ifconfig", "clear", "whoami"]
 
 # Main loop to read and execute user commands
 while True:
@@ -28,7 +28,7 @@ while True:
         if command == "q":
             break
         
-        # Save command to history file
+        # Save command to history file#
         readline.write_history_file(histfile)
         
         # Split command into tokens
